@@ -94,7 +94,7 @@ def main():
         action = agent.chooseAction(state)
         reward += env.act(action)
 
-        if env.game_over() or curr_score > 20:
+        if env.game_over(): #or curr_score > 20:
           agent.setFitness(reward)
           print("Agent ", i, " fitness: ", agent.fitness)
           break
