@@ -52,7 +52,7 @@ def endGen(gen, players):
     return population
 
 def main():
-  gen = 3
+  gen = 2
   width = 500
   height = 300
   game = Pong(width, height, MAX_SCORE=3)
@@ -69,7 +69,6 @@ def main():
       agent = Agent(env)
       agent.loadModel(gen, i)
       population.append(agent)
-    population = endGen(gen, population)
 
   while gen < MAX_GEN:
     print("Generation: ", gen)
